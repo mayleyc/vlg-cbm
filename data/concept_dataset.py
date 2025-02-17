@@ -146,8 +146,8 @@ class ConceptDataset(Dataset):
         return len(matched_bbxs) > 0, matched_bbxs
 
     def _get_data(self, idx):
-        # data_file = f"{self.dir}/{idx}.json"
-        data_file = f"./annotations/cub_val/{idx}.json"
+        data_file = f"{self.dir}/{idx}.json"
+        #data_file = f"./annotations/cub_val/{idx}.json"
         print(data_file)
         with open(data_file, "r") as f:
             data = json.load(f)
